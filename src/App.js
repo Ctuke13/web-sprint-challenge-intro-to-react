@@ -16,6 +16,7 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [searchMatch, setSearchMatch] = useState([]);
+  const [open, setOpen] = useState(false);
 
   const handleChange = (e) => {
     setSearchInput(e.target.value);
@@ -53,6 +54,8 @@ const App = () => {
             mass={char.mass}
             hair={char.hair_color}
             skin={char.skin_color}
+            setOpen={setOpen}
+            open={open}
           />
         ))}
       </div>
